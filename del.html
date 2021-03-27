@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-lg-8 m-auto d-block">
+            <form action="login.html" onsubmit="return validate()">
+
+             <br>
+             <br>
+            <div class="form-group">
+                <label for="username"> Enter Username</label>
+                <input type="text " name="user" class="form-control" id="user" placeholder="Username">
+                <span id="span1" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label for="Emailid">Enter Email</label>
+                <input type="text " name="email" class="form-control" id="email">
+                <span id="span2" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Enter password</label>
+                <input type="password " name="password" class="form-control" id="password">
+                <span id="span3" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label for="cpassword">Re-type password</label>
+                <input type="password " name="cpass" class="form-control" id="cpass" placeholder="confirm password">
+                <span id="span4" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label for="address">Enter address<address></address></label>
+                <input type="text " name="address" class="form-control" id="address"placeholder="address">
+                <span id="span5" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Enter phone </label>
+                <input type="text " name="phone" class="form-control" id="phone">
+                <span id="span6" class="text-danger font-weight-bold"></span>
+            </div>
+            <input type="submit" value="submit" name="submit" class="btn btn-success" >
+            
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    function validate(){
+        var user=document.getElementById('user').value;
+        var Emailid=document.getElementById('email').value;
+        var password=document.getElementById('password').value;
+        var cpassword=document.getElementById('cpass').value;
+        var address=document.getElementById('address').value;
+        var phone=document.getElementById('phone').value;
+
+
+
+
+
+
+
+
+        if (user==""){
+            document.getElementById('span1').innerHTML=" *Username cannot be blank";
+            return false;
+        }
+
+     if (Emailid==""){
+            document.getElementById('span2').innerHTML=" *Email cannot be blank";
+            return false;
+        }
+        if (password==""){
+            document.getElementById('span3').innerHTML=" *password cannot be blank";
+            return false;
+        }
+        if (cpassword==""){
+            document.getElementById('span4').innerHTML=" *password cannot be blank";
+            return false;
+        }
+       if (address==""){
+            document.getElementById('span5').innerHTML=" *Address cannot be blank";
+            return false;
+        }
+       if (phone==""){
+            document.getElementById('span6').innerHTML=" *Phone number field cannot be blank";
+            return false;
+        }
+      else  {
+            return true;
+        }
+
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Kerala tourism</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      font-family:'Times New Roman', Times, serif;
+    }
+   header{
+     background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('./pictures/KASARGODE.jpg');
+     background-size: cover;
+     background-position:center ;
+     background-repeat: no-repeat;
+     width: 100%;
+    height: 100vh;
+    background-size: 100%;
+   }
+   ul{
+     float: right;
+     list-style-type: none;
+   }
+  
+ul li{
+  margin-top: 50px;
+  margin-right: 30px;
+  display: inline-block;
+
+}
+
+ul li a{
+  text-decoration: none;
+  color: rgb(241, 241, 241);
+  padding: 10px 30px;
+  border: 1px solid rgb(238, 230, 230);
+  transition: 0.6s ease;
+}
+ul li a:hover{
+  background-color: rgb(14, 13, 13,0.5);
+  color: rgb(247, 247, 247);
+}
+
+.logo img{
+  float:left;
+  width: 100px;
+  height: auto;
+}
+  .main{
+    max-width: 1200px;
+    margin: auto;
+  }
+.title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+
+}
+.title{
+  color: rgb(0, 0, 0,0.75);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 60px;
+  background: rgb(121, 121, 121,0.25);
+}
+.button{
+  margin-top: 30px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  transition: 0.6s ease;
+}
+.btn{
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.6s ease;
+}
+.btn:hover{
+  background-color: rgb(0, 0, 0,0.5);
+  color: aliceblue;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="main">
+      <div class="logo">
+        <img src="./pictures/logo.png" alt="">
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="signup.html"> Get Newsletter</a></li>
+      </ul>
+    </div>
+    <div class="title">
+      <h1>
+        KeralaTourism
+      </h1>
+    </div>
+    <div class="button">
+      <a href="signup.html " class="btn">SignUp</a>
+      <a href="login.html" class="btn">Login</a>
+
+    </div>
+  </header>
+</body>
+</html>

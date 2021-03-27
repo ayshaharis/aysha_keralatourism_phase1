@@ -1,0 +1,94 @@
+.bg{
+    background-image: url('./pictures/al.jpg');
+    
+}
+body{
+    padding-top: 2rem;
+    
+}
+p{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+}
+
+p.district
+{
+    text-align: center;
+    border-radius: 10px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .img-wrap{
+      width: 100%;
+  }
+  .img-wrap img{
+      width: 100%;
+      padding:10px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 rgb(97, 55, 91);
+      opacity: .35;
+
+  }
+  .about-body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  #aboutus{
+      padding-bottom: 10px;
+  }
+  .text{
+      background-color:rgb(159, 147, 160 .5);
+      color:rgb(107, 70, 102);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .about-name{
+      color: cadetblue;
+      font-weight: bolder;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding-bottom: 3rem;
+  }
+  nav{
+    margin-top: 5px;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(216, 199, 44, 0.6);
+    line-height: 80px;
+}
+nav ul{
+    margin-left: 10px;
+}
+
+nav ul li{
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.8s all;
+    background:rgb(93, 153, 128); ;
+}
+nav ul li:hover{
+    
+    text-decoration: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    
+    color: white;
+    padding: 30px;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: rgb(255, 217, 0);
+}

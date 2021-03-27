@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     
+    <title>Login</title>
+    <style>
+      .form-container{
+          background: rgba(221, 211, 195, 0.671);
+          padding: 18px;
+          
+          margin-bottom: 3rem;
+          border-radius: 30px;
+          box-shadow: 0px 0px 10px 0px rgb(15, 14, 11);
+          position: inherit;
+          top: 3vh;
+      }
+        .bg{
+          
+            background: url('./pictures/KASARGODE.jpg') no-repeat;
+            width: 100%;
+            height: 100vh;
+            
+            background-size: cover;
+            position: relative;
+            
+             
+        }
+        .btn-block{
+            background-color: rgba(8, 8, 8, 0.671);
+        }
+        .btn{
+          margin-top: 0px;
+          position: inherit;
+        }
+        .btn:hover{
+          background: rgb(8, 8, 8);
+          color: white;
+        }
+
+
+    </style>
+   
+
+    </script>
+  </head>
+  <body>
+    
+<section class="container-fluid bg ">
+    <section class="row justify-content-center">
+        <section class="col-12 col-sm-6 ">
+            <form class="form-container" action="login.html" onsubmit="return validate()" >
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="name" class="form-control" id="user" aria-describedby="emailHelp" placeholder="Enter name">
+                  <span id="span1" class=" form-text text-muted"  ></span>
+                  
+                </div>
+                
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <span id="span2" class="form-text text-muted"  ></span>
+                        
+                        
+                      </div>
+                     
+
+                        <div class="form-group mr-2">
+                            <label for="password ">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" onkeyup="return passwordcheck(this.value)">
+                            <span id="span3"  ></span>
+                          </div>
+                          
+                     
+                      <div class="form-group">
+                              <label for="password2">Confirm password</label>
+                              <input type="password" class="form-control" id="cpass"  placeholder="Confirm password">
+                              <span id="span4" class="form-text text-muted"  ></span>
+                             
+                            </div>
+                     
+                    
+                
+                  <div class="form-group">
+                    <label for="address"> Address</label>
+                    <input type="address" class="form-control" id="address"  placeholder="Enter Address">
+                    <span id="span5" class="form-text text-muted"  ></span>
+                    
+                  </div>
+                
+                  <div class="form-group mt-0">
+                  <label for="phone"> phone number</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone number">
+                  <span id="span6" class=" form-text text-muted"  ></span>
+                 
+                   </div>
+                  <div>
+                    <button type="submit" value="submit" class="btn btn-primary btn-block">Sign up</button>
+                  </div>
+                  
+                   
+              </form>
+        </section>
+    </section>
+</section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+  
+  
+    <script type="text/javascript">
+
+
+     
+      
+      
+      
+      //     // let regexp=/^([6-9])(0-9){9}$/
+      //     // if (regexp.test(phone.value)){
+               
+    
+
+
+
+
+
+
+
+
+          function validate(){
+        var user=document.getElementById('user').value;
+        var Emailid=document.getElementById('email').value;
+        var password=document.getElementById('password').value;
+        var cpassword=document.getElementById('cpass').value;
+        var address=document.getElementById('address').value;
+        var phone=document.getElementById('phone').value;
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+        
+
+
+
+
+
+        if (user==""){
+            document.getElementById('span1').innerHTML=" *Username cannot be blank";
+            return false;
+        }
+
+        if (user.length <=2){
+          document.getElementById('span1').innerHTML=" *Username too small";
+            return false;
+        }
+
+     if (Emailid==""){
+            document.getElementById('span2').innerHTML=" *Email cannot be blank";
+            return false;
+        }
+        if (password==""){
+            document.getElementById('span3').innerHTML=" *password cannot be blank";
+            return false;
+        }
+        if(password!=cpassword){
+          document.getElementById('span4').innerHTML=" *Password mismatch";
+            return false;
+        }
+        if (cpassword==""){
+            document.getElementById('span4').innerHTML=" *password cannot be blank";
+            return false;
+        }
+       if (address==""){
+            document.getElementById('span5').innerHTML=" *Address cannot be blank";
+            return false;
+        }
+       if (phone==""){
+            document.getElementById('span6').innerHTML=" *Phone number field cannot be blank";
+            return false;
+        }
+        if(isNaN(phone)){
+          document.getElementById('span6').innerHTML=" *Only numbers are alowed";
+            return false;
+        }
+       if(!(phone.match(phoneno))){
+        document.getElementById('span6').innerHTML=" *Number format not allowed";
+         return false;
+
+       }
+      else  {
+            return true;
+        }
+
+    }
+    function passwordcheck(password){
+      if (password.length == 0) {
+            document.getElementById('span3').innerHTML = "cannot be blank";
+            document.getElementById('span3').style.color="grey";
+            return;
+        }
+        var regex = new Array();
+        regex.push("[A-Z]"); 
+        regex.push("[a-z]"); 
+        regex.push("[0-9]"); 
+        regex.push("[$@$!%*#?&]");
+        var passed =0;
+        
+        for (var i = 0; i < regex.length; i++) {
+            if (new RegExp(regex[i]).test(password)) {
+                passed++;
+            }
+        }
+        if (passed > 2 && password.length > 8) {
+            passed++;
+        }
+        var color = "";
+        var strength = "";
+        switch (passed) {
+            case 0:
+            case 1:
+                strength = "poor password";
+                color = "red";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                strength = "medium password";
+                color = "darkorange";
+                break;
+            case 5:
+                strength = "strong password ";
+                color = "darkgreen";
+                break;
+        }
+        document.getElementById('span3').innerHTML = strength;
+        document.getElementById('span3').style.color = color;
+    }
+
+    
+      
+  </script>
+  
+  </body>
+
+</html>
